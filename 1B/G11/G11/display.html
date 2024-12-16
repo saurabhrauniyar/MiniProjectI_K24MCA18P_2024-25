@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H2>DISPLAY PAGE</H2>
+    <P>NAME : <span id="t1"></span></P>
+    <P>Email :<span id="t2"></span></P>
+    <P>Message :<span id="t3"></span></P>
+    <script>
+        para=new URLSearchParams(window.location.search)
+        document.getElementById("t1").textContent=para.get('fname')||'NA';
+        document.getElementById("t2").textContent=para.get('mail')||'NA';
+        document.getElementById("t3").textContent=para.get('msg')||'NA';
+    </script>
+</body>
+</html>
