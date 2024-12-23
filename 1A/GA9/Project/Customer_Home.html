@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/navbar.css">
+    <style>
+        body {
+            background-color: black;
+            color: goldenrod;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar-brand, .nav-link {
+            color: whitesmoke !important; /* Updated the color of nav-link text to white */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: goldenrod !important;
+        }
+
+        .dropdown-menu {
+            background-color: #222;
+        }
+
+        .dropdown-item {
+            color: goldenrod;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background-color: goldenrod;
+
+            color: black;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .btn {
+            background-color: goldenrod;
+            color: black;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="/images/Regal_Pines_Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+
+               
+                <a class="btn btn-outline-warning me-2" href="/AdminCustomerChoose.html">Login</a>
+               
+
+            </div>
+        </div>
+    </nav>
+    </nav>
+
+    <!-- Booking Section -->
+    <div class="form-container">
+        <h2 class="text-center">Booking Details</h2>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" id="age" placeholder="Enter your age">
+        </div>
+        <div class="mb-3">
+            <label for="persons" class="form-label">Number of Persons:</label>
+            <input type="number" class="form-control" id="persons" placeholder="Enter number of persons">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+            <label for="roomType" class="form-label">Room Type:</label>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="roomDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Room Type
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="roomDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="selectRoom('Deluxe')">Deluxe</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectRoom('Suite')">Suite</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="selectRoom('Standard')">Standard</a></li>
+                </ul>
+            </div>
+        </div>
+        <button class="btn w-100 mb-3" id="checkinButton">Check-In Confirmation</button>
+        <button class="btn w-100" id="checkoutButton">Check-Out</button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Function to handle room selection
+        function selectRoom(roomType) {
+            document.getElementById('roomDropdown').textContent = roomType;
+        }
+
+        document.getElementById('checkinButton').addEventListener('click', function() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                alert('Check-In Confirmation sent to ${email}');
+            } else {
+                alert('Please enter a valid email.');
+            }
+        });
+
+        document.getElementById('checkoutButton').addEventListener('click', function() {
+            alert('Check-Out notification sent to the admin.');
+        });
+
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            alert('You have been logged out.');
+        });
+    </script>
+</body>
+</html>
