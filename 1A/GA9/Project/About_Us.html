@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="/css/navbar.css">
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-In on Scroll */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover Animations */
+        .hover-shadow {
+            transition: all 0.4s ease;
+            box-shadow: 0 0 0px #f1c40f;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 10px 20px #f1c40f;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.1);
+        }
+
+        /* Headings Hover Effect */
+        h2:hover, h5:hover {
+            text-shadow: 0 0 15px #f1c40f, 0 0 30px goldenrod;
+            transition: text-shadow 0.3s ease-in-out;
+        }
+
+        /* Black and Golden Theme */
+        body {
+            background-color: #000; /* Black background */
+            color: #f1c40f; /* Golden text */
+            overflow-x: hidden; /* Avoid horizontal scroll */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+       
+        section {
+            padding: 3rem 0;
+        }
+
+        form input, form textarea {
+            background-color: #1a1a1a; /* Black input background */
+            color: #f1c40f; /* Golden text for input fields */
+            border: 1px solid #f1c40f; /* Golden border for input fields */
+            border-radius: 5px;
+            padding: 0.8rem;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: goldenrod; /* Golden border on focus */
+            box-shadow: 0 0 10px #f1c40f; /* Golden glow effect on focus */
+        }
+
+        button {
+            background-color: #f1c40f; /* Golden button background */
+            color: #000; /* Black button text */
+            border: none;
+            border-radius: 5px;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(241, 196, 15, 0.7); /* Golden glow */
+        }
+
+        button:hover {
+            background-color: #000; /* Black background on hover */
+            color: #f1c40f; /* Golden text on hover */
+            border: 1px solid #f1c40f; /* Golden border on hover */
+            box-shadow: 0 0 20px #f1c40f; /* Enhanced golden glow on hover */
+            transform: scale(1.05); /* Slight growth effect */
+        }
+
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: goldenrod; /* Slightly lighter golden text on hover */
+            text-decoration: underline;
+        }
+
+        /* Section transitions */
+        .smooth-transition {
+            scroll-behavior: smooth;
+        }
+
+        .section-divider {
+            height: 10px;
+            background: linear-gradient(to right, #f1c40f, #000, #f1c40f);
+            margin: 2rem 0;
+            animation: fadeIn 1.5s infinite alternate;
+        }
+
+        /* Image Hover Effect */
+        img:hover {
+            box-shadow: 0 0 20px #f1c40f;
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Footer Design */
+        footer {
+            background-color: #1a1a1a;
+            color: #f1c40f;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: goldenrod;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="/images/Regal_Pines_Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container fade-in-on-scroll">
+            <div class="row">
+                <div class="col-md-6 fade-in">
+                    <h2 class="mb-4">About Us</h2>
+                    <p>
+                        Welcome to our luxurious resort management system! We provide state-of-the-art tools to streamline
+                        your resort operations, enhance guest experiences, and ensure seamless management.
+                    </p>
+                    <p>
+                        Our mission is to offer comfort and convenience while helping your business thrive in the
+                        competitive hospitality industry.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center slide-in">
+                    <img src='/images/OIP.jpeg' alt="Resort Image" class="img-fluid hover-grow rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5">
+        <div class="container fade-in-on-scroll">
+            <h2 class="text-center mb-4 fade-in">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 fade-in">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6 slide-in">
+                    <h5>Contact Information</h5>
+                    <p><i class="bi bi-geo-alt-fill"></i> 123 Paradise Street, Resort City</p>
+                    <p><i class="bi bi-telephone-fill"></i>Ayush Saini: 9520582736<br>Antra Prakash: 8434590974</p>
+                    <p>
+                        <i class="bi bi-envelope-fill"></i> 
+                        <a href="mailto:ayushsaini13jan@gmail.com">ayushsaini13jan@gmail.com</a><br>
+                        <a href="mailto:antra.prakash12@gmail.com">antra.prakash12@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".fade-in-on-scroll");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            });
+
+            elements.forEach((element) => observer.observe(element));
+        });
+    </script>
+</body>
+</html>
