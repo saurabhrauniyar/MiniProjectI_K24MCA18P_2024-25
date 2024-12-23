@@ -1,0 +1,91 @@
+/* General Container */
+.aboutUsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url('../assets/contact_us.jpg'); /* Update with your image path */
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    color: #6d6d6d;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Hero Section */
+  .heroSection {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .heroSection h1 {
+    color: #2f4f4f;
+    margin-bottom: 15px;
+    font-size: 2rem;
+  }
+  
+  .heroSection p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Mission Section */
+  .missionSection {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .missionSection h2 {
+    color: #2f4f4f;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+  
+  .missionSection p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Team Section */
+  .teamSection {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .teamSection h2 {
+    color: #2f4f4f;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+  
+  .teamSection p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Footer */
+  .aboutFooter {
+    margin-top: 20px;
+    text-align: center;
+    color: #2f4f4f;
+  }
+  
