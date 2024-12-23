@@ -1,0 +1,78 @@
+.footer {
+    background-color: #333; /* Dark Gray */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    height: 200px;
+    margin-top: 200px;
+  }
+
+  .footer .social-icons i {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .footer .social-icons i:hover {
+    transform: scale(1.2);
+  }
+
+  .footer .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+
+  .footer .links a:hover {
+    color: #ddd;
+  }
+
+  .footer .col {
+    padding-top: 20px;
+  }
+
+  /* Responsive Flexbox for Footer */
+  .footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer .footer-content .left-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .footer .footer-content .right-email {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .footer .footer-content .right-email p {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer .social-icons i {
+      font-size: 1.2rem;
+      margin: 0 10px;
+    }
+
+    .footer .links a {
+      margin: 0 10px;
+    }
+
+    .footer .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer .footer-content .right-email {
+      margin-top: 20px;
+    }
+  }

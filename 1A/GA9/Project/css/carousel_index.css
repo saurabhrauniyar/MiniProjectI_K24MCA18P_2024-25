@@ -1,0 +1,39 @@
+.carousel-card {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+  }
+
+  .carousel-item.active .carousel-card {
+    transform: scale(1); /* Highlight center card */
+  }
+
+  .carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .carousel-item img {
+    max-width: 30%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+  }
+
+  .carousel-card img:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-card {
+      transform: scale(0.9);
+    }
+    .carousel-item {
+      gap: 10px;
+    }
+  }

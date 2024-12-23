@@ -1,0 +1,141 @@
+*{
+    text-decoration: none;
+}
+body{
+    background-color: black;
+}
+.navbar{
+    background: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-right 15px;
+    padding-left: 15px;
+    /* height: 80px; */
+
+   
+}
+
+.navdiv
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+li{
+    margin-left: 30px;
+    list-style: none;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+li a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+button{
+    background-color: black;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+}
+
+button a{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.navbar-dark .nav-link {
+    color: gold;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ffc107;
+    /* Optional: Add hover effect */
+}
+
+.nav-link {
+    font-family: serif;
+    font-size: 100px;
+
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-brand img{
+    height: 80px;
+    width: 80px;
+}
+
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-family: serif;
+    font-size: 20px;
+    padding: 5px 0;
+    position: relative;
+    /* Necessary for positioning the ::after */
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #eee8aa;
+    /* Optional: Change text color on hover */
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #eee8aa;
+    /* Line color */
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+    /* Expands line only under the text */
+}
+
+
+
+.btn {
+    font-family: Cambria;
+    font-size: 18px;
+    color: black;
+    background-color: #daa520;
+    border: solid gray;
+    padding: 2px;
+}
+
+.btn:hover {
+    background-color: #da9100;
+    color: black;
+}
+
+@font-face {
+    font-family: resort_h1;
+    src: url(C:\Users\Shivani saini\OneDrive\Desktop\resort mgt fonts\h1(1).otf);
+}
+
+.video-content h1{
+    font-family: resort_h1;
+}

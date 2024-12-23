@@ -1,0 +1,100 @@
+.video-background {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    width: 100%; /* Ensure the width spans the screen */
+  }
+
+  .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust to fit the screen width */
+    height: 100%; /* Adjust to fit the screen height */
+    object-fit: cover; /* Ensures the video covers the entire area without distortion */
+    z-index: -1; /* Push video behind content */
+  }
+
+  
+
+  /* Fade effect for video */
+  .video-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay to fade the video */
+    z-index: 0;
+  }
+
+  /* Heading styling with shadow */
+  .video-content {
+    position: relative;
+    z-index: 1; /* Place above the video */
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px; /* Add padding for smaller screens */
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease; /* Smooth transition for scrolling */
+  }
+
+  .video-content h1,h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier,;
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.9); /* Prominent shadow for better visibility */
+    color:  #da9100;
+    padding-right: 970px;
+    margin-top: 180px;
+  }
+
+
+
+  /* Text animation on scroll */
+  .video-content.scroll-effect {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+
+  /* Adjust heading size for smaller screens */
+  @media (max-width: 768px) {
+    .video-content h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .video-content h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .display-4
+  {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.9); /* Prominent shadow for better visibility */
+    color:  #da9100;
+  }
+
+  .lead{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  #mainCol{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.9); /* Prominent shadow for better visibility */
+    color:  #da9100;
+  }
+
+  .col{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }

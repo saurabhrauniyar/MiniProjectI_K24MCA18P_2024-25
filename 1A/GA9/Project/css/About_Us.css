@@ -1,0 +1,172 @@
+  /* Custom animations */
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-In on Scroll */
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Animations */
+.hover-shadow {
+    transition: all 0.4s ease;
+    box-shadow: 0 0 0px #f1c40f;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 10px 20px #f1c40f;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.hover-grow {
+    transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+    transform: scale(1.1);
+}
+
+/* Headings Hover Effect */
+h2:hover, h5:hover {
+    text-shadow: 0 0 15px #f1c40f, 0 0 30px goldenrod;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Black and Golden Theme */
+body {
+    background-color: #000; /* Black background */
+    color: #f1c40f; /* Golden text */
+    overflow-x: hidden; /* Avoid horizontal scroll */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav.navbar {
+    background-color: #1a1a1a; /* Darker shade of black for navbar */
+    border-bottom: 2px solid #f1c40f; /* Golden border for the navbar */
+}
+
+nav.navbar .navbar-brand,
+nav.navbar .nav-link {
+    color: #f1c40f !important; /* Golden text in navbar */
+    font-weight: bold;
+}
+
+nav.navbar .nav-link:hover {
+    color: goldenrod !important; /* Slightly lighter golden text on hover */
+}
+
+section {
+    padding: 3rem 0;
+}
+
+form input, form textarea {
+    background-color: #1a1a1a; /* Black input background */
+    color: #f1c40f; /* Golden text for input fields */
+    border: 1px solid #f1c40f; /* Golden border for input fields */
+    border-radius: 5px;
+    padding: 0.8rem;
+}
+
+form input:focus, form textarea:focus {
+    border-color: goldenrod; /* Golden border on focus */
+    box-shadow: 0 0 10px #f1c40f; /* Golden glow effect on focus */
+}
+
+button {
+    background-color: #f1c40f; /* Golden button background */
+    color: #000; /* Black button text */
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.7); /* Golden glow */
+}
+
+button:hover {
+    background-color: #000; /* Black background on hover */
+    color: #f1c40f; /* Golden text on hover */
+    border: 1px solid #f1c40f; /* Golden border on hover */
+    box-shadow: 0 10px 20px #f1c40f; /* Enhanced golden glow on hover */
+    transform: scale(1.05); /* Slight growth effect */
+}
+
+a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: goldenrod; /* Slightly lighter golden text on hover */
+    text-decoration: underline;
+}
+
+/* Section transitions */
+.smooth-transition {
+    scroll-behavior: smooth;
+}
+
+.section-divider {
+    height: 10px;
+    background: linear-gradient(to right, #f1c40f, #000, #f1c40f);
+    margin: 2rem 0;
+    animation: fadeIn 1.5s infinite alternate;
+}
+
+/* Image Hover Effect */
+img:hover {
+    box-shadow: 0 10px 20px #f1c40f;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer Design */
+footer {
+    background-color: #1a1a1a;
+    color: #f1c40f;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
